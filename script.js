@@ -81,6 +81,9 @@ if (date1 > currentdate) {
 } else {
   status1.innerHTML = "Pay date over";
   total1.innerHTML = latefee + "&nbsp;&nbsp;&nbsp;(10% late fee charge)";
+  status1.style.color = "red";
+  status1.style.fontSizer = "18px";
+  status1.style.fontWeight = "bolder";
 }
 document.querySelector(".status1").style.fontWeight = "bolder";
 
@@ -98,10 +101,10 @@ if (date2 > currentdate) {
 } else {
   status2.innerHTML = "Pay date over";
   total2.innerHTML = latefee + "&nbsp;&nbsp;&nbsp;(10% late fee charge)";
+  status2.style.color = "red";
+  status2.style.fontSizer = "18px";
+  status2.style.fontWeight = "bolder";
 }
-document.querySelector(".status2").style.color = "red";
-document.querySelector(".status2").style.fontSize = "18px";
-document.querySelector(".status2").style.fontWeight = "bolder";
 
 //row 3
 var status3 = document.querySelector(".status3");
@@ -117,10 +120,10 @@ if (date3 > currentdate) {
 } else {
   status3.innerHTML = "Pay date over";
   total3.innerHTML = latefee + "&nbsp;&nbsp;&nbsp;(10% late fee charge)";
+  status3.style.color = "red";
+  status3.style.fontSizer = "18px";
+  status3.style.fontWeight = "bolder";
 }
-document.querySelector(".status3").style.color = "red";
-document.querySelector(".status3").style.fontSize = "18px";
-document.querySelector(".status3").style.fontWeight = "bolder";
 
 //row 4
 var status4 = document.querySelector(".status4");
@@ -136,10 +139,10 @@ if (date4 > currentdate) {
 } else {
   status4.innerHTML = "Pay date over";
   total4.innerHTML = latefee + "&nbsp;&nbsp;&nbsp;(10% late fee charge)";
+  status4.style.color = "red";
+  status4.style.fontSizer = "18px";
+  status4.style.fontWeight = "bolder";
 }
-document.querySelector(".status4").style.color = "red";
-document.querySelector(".status4").style.fontSize = "18px";
-document.querySelector(".status4").style.fontWeight = "bolder";
 
 //row 5
 var status5 = document.querySelector(".status5");
@@ -149,14 +152,18 @@ var total5 = document.querySelector(".total5");
 if (date5 > currentdate) {
   status5.innerHTML = "Unpaid";
   total5.innerHTML = sub_total5;
+  status5.style.fontWeight = "bolder";
 } else if (date5 == currentdate) {
   status5.innerHTML = "Unpaid";
   total5.innerHTML = sub_total5;
+  status5.style.fontWeight = "bolder";
 } else {
   status5.innerHTML = "Pay date over";
   total5.innerHTML = latefee + "&nbsp;&nbsp;&nbsp;(10% late fee charge)";
+  status5.style.color = "red";
+  status5.style.fontSizer = "18px";
+  status5.style.fontWeight = "bolder";
 }
-document.querySelector(".status5").style.fontWeight = "bolder";
 document.querySelector(".status6").style.color = "green";
 document.querySelector(".status6").style.fontWeight = "bolder";
 document.querySelector(".status6").style.fontSize = "18px";
