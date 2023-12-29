@@ -70,7 +70,8 @@ var currentdate = new Date().toLocaleDateString();
 //row1
 var status1 = document.querySelector(".status1");
 var sub_total1 = document.querySelector(".sub-total1").innerHTML;
-var latefee = parseInt(sub_total1) + 100;
+var per1 = (parseInt(sub_total1) * 10) / 100;
+var latefee = parseInt(sub_total1) + per1;
 var total1 = document.querySelector(".total1");
 if (date1 > currentdate) {
   status1.innerHTML = "Unpaid";
@@ -90,7 +91,8 @@ document.querySelector(".status1").style.fontWeight = "bolder";
 //row 2
 var status2 = document.querySelector(".status2");
 var sub_total2 = document.querySelector(".sub-total2").innerHTML;
-var latefee = parseInt(sub_total2) + 100;
+var per2 = (parseInt(sub_total2) * 10) / 100;
+var latefee = parseInt(sub_total2) + per2;
 var total2 = document.querySelector(".total2");
 if (date2 > currentdate) {
   status2.innerHTML = "unpaid";
@@ -109,7 +111,8 @@ if (date2 > currentdate) {
 //row 3
 var status3 = document.querySelector(".status3");
 var sub_total3 = document.querySelector(".sub-total3").innerHTML;
-var latefee = parseInt(sub_total3) + 100;
+var per3 = (parseInt(sub_total3) * 10) / 100;
+var latefee = parseInt(sub_total3) + per3;
 var total3 = document.querySelector(".total3");
 if (date3 > currentdate) {
   status3.innerHTML = "Unpaid";
@@ -128,7 +131,8 @@ if (date3 > currentdate) {
 //row 4
 var status4 = document.querySelector(".status4");
 var sub_total4 = document.querySelector(".sub-total4").innerHTML;
-var latefee = parseInt(sub_total4) + 100;
+var per4 = (parseInt(sub_total4) * 10) / 100;
+var latefee = parseInt(sub_total4) + per4;
 var total4 = document.querySelector(".total4");
 if (date4 > currentdate) {
   status4.innerHTML = "Unpaid";
@@ -147,7 +151,8 @@ if (date4 > currentdate) {
 //row 5
 var status5 = document.querySelector(".status5");
 var sub_total5 = document.querySelector(".sub-total5").innerHTML;
-var latefee = parseInt(sub_total5) + 100;
+var per5 = (parseInt(sub_total5) * 10) / 100;
+var latefee = parseInt(sub_total5) + per5;
 var total5 = document.querySelector(".total5");
 if (date5 > currentdate) {
   status5.innerHTML = "Unpaid";
