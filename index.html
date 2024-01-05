@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css">
     <title>Hello, world!</title>
 </head>
@@ -15,71 +17,84 @@
         <div class="row">
             <div class="col">
                 <h1 class="text-center m-5 fw-bolder">Internet User Fees Section</h1>
-                <table class="table table-dark table-striped">
+                <input class="form-control mb-5 mt-5" type="text" id="reservationListInput" onkeyup="reservationListFunction()" placeholder="Search for reservation..">
+
+                <table class="table table-dark table-striped" id="reservationTable">
                     <thead>
-                        <tr>
+                        <tr class="header">
                             <th scope="col">#</th>
                             <th scope="col">Name</th>
                             <th scope="col">lastData</th>
-                            <th scope="col" class="">Status</th>
-                            <th scope="col" class="sub-total">Fees</th>
-                            <th scope="col" class="total">Total Fees</th>
+                            <th scope="col" id="status">Status</th>
+                            <th scope="col">Fees</th>
+                            <th scope="col" id="total">Total Fees</th>
+                            <th scope="col">Details Show</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row">1</th>
-                            <td>ahmad</td>
-                            <td class="lastdate">12/29/2023</td>
-                            <td class="status1"></td>
-                            <td class="sub-total1">2000</td>
-                            <td class="total1"></td>
+                            <td scope="row">1</td>
+                            <td class="name">ahmad</td>
+                            <td class="lastdate">01/01/2024</td>
+                            <td class="status1" id="status"></td>
+                            <td class="sub-total1" id="fee">2600</td>
+                            <td class="total1" id="total"></td>
+                            <td><i class="fa-regular fa-eye btn1" style="display: flex; justify-content: center;align-items: center;" onclick="myFunction()"></i></td>
 
                         </tr>
                         <tr>
-                            <th scope="row">2</th>
+                            <td scope="row">2</td>
                             <td>Mark</td>
-                            <td class="lastdate">12/25/2023</td>
-                            <td class="status2"></td>
-                            <td class="sub-total2">3000</td>
-                            <td class="total2"></td>
-
+                            <td class="lastdate">12/31/2023</td>
+                            <td class="status2" id="status"></td>
+                            <td class="sub-total2" id="fee">2900</td>
+                            <td class="total2" id="total"></td>
+                            <td><i class="fa-regular fa-eye btn2" style="display: flex; justify-content: center;align-items: center;" onclick="myFunction()"></i></td>
                         </tr>
                         <tr>
                             <th scope="row">3</th>
                             <td>raza</td>
-                            <td class="lastdate">12/28/2023</td>
-                            <td class="status3"></td>
-                            <td class="sub-total3">1000</td>
-                            <td class="total3"></td>
-
+                            <td class="lastdate">02/02/2024</td>
+                            <td class="status3" id="status"></td>
+                            <td class="sub-total3" id="fee">2000</td>
+                            <td class="total3" id="total"></td>
+                            <td><i class="fa-regular fa-eye btn3" style="display: flex; justify-content: center;align-items: center;" onclick="myFunction()"></i></td>
                         </tr>
                         <tr>
                             <th scope="row">4</th>
                             <td>abid</td>
                             <td class="lastdate">12/24/2023</td>
-                            <td class="status4"></td>
-                            <td class="sub-total4">4000</td>
-                            <td class="total4"></td>
-
+                            <td class="status4" id="status"></td>
+                            <td class="sub-total4" id="fee">4000</td>
+                            <td class="total4" id="total"></td>
+                            <td><i class="fa-regular fa-eye btn4" style="display: flex; justify-content: center;align-items: center;" onclick="myFunction()"></i></td>
                         </tr>
                         <tr>
                             <th scope="row">5</th>
                             <td>danish</td>
                             <td class="lastdate">12/31/2023</td>
-                            <td class="status5"></td>
-                            <td class="sub-total5">1000</td>
-                            <td class="total5"></td>
-
+                            <td class="status5" id="status"></td>
+                            <td class="sub-total5" id="fee">1000</td>
+                            <td class="total5" id="total"></td>
+                            <td><i class="fa-regular fa-eye btn5" style="display: flex; justify-content: center;align-items: center; " onclick="myFunction()"></i></td>
                         </tr>
                         <tr>
                             <th scope="row">6</th>
                             <td>kumail</td>
                             <td class="lastdate">12/01/2024</td>
-                            <td class="status6">Paid</td>
-                            <td class="sub-total6">3000</td>
-                            <td class="total6">3000</td>
-
+                            <td class="status6" id="status">Paid</td>
+                            <td class="sub-total6" id="fee">3000</td>
+                            <td class="total6" id="total">3000</td>
+                            <td><i class="fa-regular fa-eye btn6" style="display: flex; justify-content: center;align-items: center;" onclick="myFunction()"></i></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">7</th>
+                            <td>kazim</td>
+                            <td class="lastdate">12/21/2023</td>
+                            <td class="status7" id="status"></td>
+                            <td class="sub-total7" id="fee">5000</td>
+                            <td class="total7" id="total"></td>
+                            <td><i class="fa-regular fa-eye btn7" style="display: flex; justify-content: center;align-items: center;" onclick="myFunction()"></i></td>
                         </tr>
                         <tr>
                             <th scope="row"></th>
@@ -88,10 +103,24 @@
                             <td class="status"></td>
                             <td class="subtotal"></td>
                             <td class="totaldues"></td>
-
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- info popup section -->
+    <div class="container popup" width="40%" style="width: 30%;margin-bottom: 40px;position: relative ;z-index:1; display: none;box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;">
+        <div class="row">
+            <div class="col" style="background: goldenrod;position: absolute;top:-350px; left: 0;color: aliceblue;padding: 20px;border-radius: 10px;">
+                <p id="id">id: </p>
+                <p id="name">name: </p>
+                <p id="lastdate">lastdate</p>
+                <p id="status">status:</p>
+                <p id="fee">fee:</p>
+                <p id="total_fee">total:</p>
             </div>
         </div>
     </div>
